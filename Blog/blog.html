@@ -78,21 +78,24 @@
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseThree">
+                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFour">
                     How many ways we can get undefined?
                 </button>
             </h2>
-            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingThree">
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingFour">
                 <div class="accordion-body">
-                    <strong>JavaScript has a runtime model based on an event loop. It
-                        executes a script from the top and works its way down creating execution contexts and pushing
-                        and popping functions onto and off the call stack.The Event Loop has one simple job — to monitor
-                        the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the
-                        first event from the queue and will push it to the Call Stack, which effectively runs it.
+                    <strong>
+                        There are many ways to get undefined. 1. A declared variable but not yet assigned with a value
+                        (uninitialized) is by default undefined. 2.When accessing a non-existing object property,
+                        JavaScript returns undefined. 3.The function parameters implicitly default to undefined. 4.
+                        Implicitly, without return statement, a JavaScript function returns undefined. 5.You get
+                        undefined when accessing an array element with an out of bounds index. 6. Set a value directly
+                        as a undefined .
+                    </strong>
                 </div>
             </div>
         </div>
