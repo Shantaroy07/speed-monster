@@ -113,6 +113,7 @@ const start = () => {
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
+
     // finished timer
     if (count === 0) {
       // -------------- START TYPING -----------------
@@ -124,9 +125,9 @@ const start = () => {
       clearInterval(startCountdown);
       startTime = new Date().getTime();
 
-
     }
     count--;
+
   }, 1000);
 };
 
