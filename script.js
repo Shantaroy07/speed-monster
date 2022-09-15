@@ -9,6 +9,7 @@ const modalBackground = document.getElementById("modal-background");
 let userText = "";
 let errorCount = 0;
 let startTime;
+
 let questionText = "";
 
 // Load and display question
@@ -67,6 +68,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
+
   const timeTaken = (finishTime - startTime) / 1000;
 
   // show result modal
@@ -110,14 +112,17 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count == 0) {
+    if (count === 0) {
       // -------------- START TYPING -----------------
-      document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
       display.classList.remove("inactive");
+      document.addEventListener("keydown", typeController);
+      countdownOverlay.style.display = "none";
+
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
+
+
     }
     count--;
   }, 1000);
